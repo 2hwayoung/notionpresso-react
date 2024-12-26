@@ -49,7 +49,7 @@ const Toggle: React.FC<ToggleProps> & { Icon: typeof ToggleIcon } = ({
       aria-expanded={open}
     >
       <div className="notion-toggle-content">
-          <button onClick={toggleOpen} className="notion-toggle-button">
+        <button onClick={toggleOpen} className="notion-toggle-button">
           {iconElement}
         </button>
         <p>
@@ -68,11 +68,11 @@ type DefaultToggleIconProps = {
 
 const DefaultToggleIcon = ({ open }: DefaultToggleIconProps) => {
   return (
-          <div
-            className={`notion-toggle-button-arrow-box ${open ? "notion-toggle-button-arrow-box-opened" : ""}`}
-          >
-            <div className="notion-toggle-button-arrow"/>
-          </div>
+    <div
+      className={`notion-toggle-button-arrow-box ${open ? "notion-toggle-button-arrow-box-opened" : ""}`}
+    >
+      <div className="notion-toggle-button-arrow" />
+    </div>
   );
 };
 

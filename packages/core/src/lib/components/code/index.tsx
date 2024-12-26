@@ -53,7 +53,7 @@ const Code = ({ ...props }: CodeArgs) => {
       <div className="notion-code-content">
         <div className="notion-code-meta">
           <div className="notion-code-language">
-            {language.replace(/^[a-z]/, (char) => char.toUpperCase())}
+            {language.replace(/^[a-z]/, (char: string) => char.toUpperCase())}
           </div>
           <button className="notion-code-copy" onClick={handleCopy}>
             <svg

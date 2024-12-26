@@ -38,6 +38,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@notionhq/client": "2.2.15",
     "@cozy-blog/notion-client": "^0.0.22",
     "@types/katex": "^0.16.7",
     "@types/node": "^18.0.0",

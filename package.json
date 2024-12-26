@@ -1,23 +1,20 @@
 {
-  "name": "@notionpresso/react",
+  "name": "@notionpresso/react-libs",
   "version": "0.0.1",
   "description": "this is a react library for notionpresso",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "story:build": "npm run build-storybook --workspace=story",
-    "story:start": "npm run storybook --workspace=story",
-    "library:build": "npm run build --workspace=@notionpresso/react",
-    "start": "npm run story:start",
-    "build": "npm run library:build",
+    "story:build": "pnpm --filter @notionpresso/story build-storybook",
+    "story:start": "pnpm --filter @notionpresso/story storybook",
+    "library:build": "pnpm --filter @notionpresso/react build",
+    "start": "pnpm story:start",
+    "build": "pnpm library:build",
     "prepare": "husky install",
     "format": "prettier --write ."
   },
   "author": "meuryphus",
   "license": "MIT",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "husky": "^8.0.0",
     "lint-staged": "^15.2.10",
